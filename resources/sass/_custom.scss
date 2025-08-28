@@ -1,0 +1,119 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.navbar {
+    .navbar-brand {
+        font-weight: 700;
+    }
+    .nav-link {
+        font-weight: 400;
+        transition: all 0.3s ease;
+        &:hover {
+            color: rgba(255, 255, 255, 0.75);
+        }
+    }
+    .dropdown-menu {
+        border: none;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    &:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+.bg-primary {
+    background-color: #007bff !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+
+// Hero Section Styles
+.hero-section {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); // Efek bayangan teks untuk keterbacaan
+    padding-top: 10rem; // Padding atas yang lebih besar
+    padding-bottom: 10rem; // Padding bawah yang lebih besar
+    z-index: 1; // Pastikan teks di atas overlay
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)); // Overlay gelap dengan gradasi
+        z-index: -1; // Letakkan overlay di bawah konten
+    }
+
+    h1 {
+        font-size: 3.5rem; // Ukuran font judul yang lebih besar
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    p.lead {
+        font-size: 1.5rem; // Ukuran font lead yang lebih besar
+        font-weight: 300;
+        margin-bottom: 2rem;
+    }
+}
+
+// Modern Card Styles for Services
+.card-service {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    &:hover {
+        transform: translateY(-10px); // Efek hover mengangkat kartu
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; // Bayangan lebih kuat
+    }
+    .card-body {
+        min-height: 250px; // Tinggi minimum untuk keseragaman
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    i {
+        color: #007bff; // Warna ikon konsisten
+    }
+}
+
+// Fixed button container
+.fixed-bottom {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    left: unset;
+    z-index: 99; // Ensure it's on top of other content
+}
+
+// Optional: add a class for consistent button styling
+.btn-nav {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out;
+    &:hover {
+        transform: scale(1.1);
+    }
+}

@@ -2,6 +2,8 @@
 
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\BeritaController;
+use App\Http\Controllers\StrukturController;
 
 // Rute Frontend
 Route::get('/', function () {
@@ -21,3 +23,13 @@ Route::get('/layanan/penyewaan', function () {
 Route::get('/layanan/sig', function () {
     return view('frontend.services.sig');
 });
+
+Route::get('/kontak', function () {
+    return view('frontend.kontak');
+});
+
+// Rute untuk Berita
+Route::get('/berita', [BeritaController::class, 'index'])->name('berita.index');
+
+// Rute untuk Struktur Organisasi
+Route::get('/struktur', [StrukturController::class, 'index'])->name('struktur.index');

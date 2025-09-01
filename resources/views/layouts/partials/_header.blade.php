@@ -25,10 +25,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Publikasi</a>
+                        <a class="nav-link {{ Request::is('berita') ? 'active' : '' }}" href="/berita">Berita</a>
+                        {{-- <a class="nav-link" href="#">Publikasi</a> --}}
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Kontak</a>
+                        <a class="nav-link {{ Request::is('kontak') ? 'active' : '' }}" href="/kontak">Kontak</a>
                     </li>
                 </ul>
             </div>

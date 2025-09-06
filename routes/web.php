@@ -4,25 +4,27 @@ use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeritaController;
 use App\Http\Controllers\StrukturController;
+use App\Http\Controllers\ProfilController;
+use App\Http\Controllers\SearchController;
+
+
+Route::get('/search', [SearchController::class, 'index'])->name('search');
+
 
 // Rute Frontend
 Route::get('/', function () {
     return view('frontend.home');
 });
 
-Route::get('/profil', function () {
-    return view('frontend.profile');
-});
+Route::get('/profil', [ProfilController::class, 'index'])->name('profil');
+// Route::get('/profil', function () {
+//     return view('frontend.profile');
+// });
 
-Route::get('/layanan/laboratorium', [ServiceController::class, 'laboratorium']);
-
-// Rute Baru untuk Layanan Lain
-Route::get('/layanan/penyewaan', function () {
-    return view('frontend.services.sewa');
-});
-Route::get('/layanan/sig', function () {
-    return view('frontend.services.sig');
-});
+// Rute untuk Layanan, semuanya ditangani oleh ServiceController
+Route::get('/layanan/laboratorium', [ServiceController::class, 'laboratorium'])->name('layanan.lab');
+Route::get('/layanan/penyewaan', [ServiceController::class, 'penyewaan'])->name('layanan.sewa');
+Route::get('/layanan/sig', [ServiceController::class, 'sig'])->name('layanan.sig');
 
 Route::get('/kontak', function () {
     return view('frontend.kontak');

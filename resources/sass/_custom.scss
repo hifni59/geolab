@@ -117,3 +117,13 @@ body {
         transform: scale(1.1);
     }
 }
+
+// Modern Card Styles for str
+.card-str {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    &:hover {
+        transform: translateY(-10px); // Efek hover mengangkat kartu
+        box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; // Bayangan lebih kuat
+    }
+}

@@ -33,3 +33,38 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Logika untuk tombol "Muat Lebih Banyak"
+    const cardBerita = document.querySelectorAll('.card-berita');
+    const muatBtn = document.getElementById('muat-lebih-banyak-btn');
+    let postsToShow = 3;
+    const loadMoreStep = 3;
+
+    // Sembunyikan semua postingan di luar 3 postingan pertama
+    cardBerita.forEach((card, index) => {
+        if (index >= postsToShow) {
+            card.style.display = 'none';
+        }
+    });
+
+    // Event listener untuk tombol
+    if (muatBtn) {
+        muatBtn.addEventListener('click', function () {
+            const hiddenPosts = Array.from(cardBerita).filter(card => card.style.display === 'none');
+
+            // Tampilkan 3 postingan berikutnya
+            for (let i = 0; i < loadMoreStep && i < hiddenPosts.length; i++) {
+                hiddenPosts[i].style.display = 'block';
+            }
+
+            // Perbarui jumlah postingan yang ditampilkan
+            postsToShow += loadMoreStep;
+
+            // Sembunyikan tombol jika tidak ada lagi postingan yang tersembunyi
+            if (postsToShow >= cardBerita.length) {
+                muatBtn.style.display = 'none';
+            }
+        });
+    }
+});

@@ -32,6 +32,12 @@
                         <a class="nav-link {{ Request::is('kontak') ? 'active' : '' }}" href="/kontak">Kontak</a>
                     </li>
                 </ul>
+                <form class="d-flex ms-lg-4" role="search" action="{{ route('search') }}" method="GET">
+                    <div class="input-group">
+                        <input class="form-control" type="search" placeholder="Cari..." aria-label="Cari" name="query" value="{{ request('query') }}">
+                        <button class="btn btn-outline-light" type="submit"><i class="bi bi-search"></i></button>
+                    </div>
+                </form>
             </div>
         </div>
     </nav>

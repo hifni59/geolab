@@ -26,5 +26,5 @@
     @include('frontend.services.partials._alur-pelayanan-lab')
 
     {{-- Partial Tabel Tarif tidak memerlukan container karena sudah ada di dalam filenya --}}
-    @include('frontend.services.partials._tabel-tarif-lab')
+    @include('frontend.services.partials._tabel-tarif-lab', ['kategoriLayanan' => $kategoriLayanan])
 @endsection

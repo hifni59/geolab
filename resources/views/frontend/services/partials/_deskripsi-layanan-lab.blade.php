@@ -35,20 +35,20 @@
                 <h5 class="fw-bold text-muted mb-3">Parameter Pengujian</h5>
                 <h6 class="fw-bold text-secondary">Proximate analysis</h6>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Total Moisture/kadar air total</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Inherent Moisture/kadar air lembab</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Ash Content/kadar abu</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Volatile Matter/kadar zat terbang</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Fixed Carbon</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Total Moisture/kadar air total</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Inherent Moisture/kadar air lembab</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Ash Content/kadar abu</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Volatile Matter/kadar zat terbang</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Fixed Carbon</li>
                 </ul>
                 <h6 class="fw-bold text-secondary">Ultimate analysis</h6>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Total sulfur/kadar sulfur</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Total sulfur/kadar sulfur</li>
                 </ul>
                 <h6 class="fw-bold text-secondary">Analysis sifat fisik</h6>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Gross Calorific Value/nilai kalori</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Hard Grove Index (HGI)</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Gross Calorific Value/nilai kalori</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Hard Grove Index (HGI)</li>
                 </ul>
             </div>
             <div class="col-md-6">
@@ -81,14 +81,14 @@
                 <h5 class="fw-bold text-muted mb-3">Parameter Pengujian</h5>
                 <h6 class="fw-bold text-secondary">Parameter Fisika</h6>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Temperatur/suhu</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Bau dan rasa</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Daya Hantar Listrik (DHL)</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Kekeruhan/turbidity</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Zat Padat Total</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Zat Padat Terlarut</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Zat Padat Tersuspensi</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i> Warna</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Temperatur/suhu</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Bau dan rasa</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Daya Hantar Listrik (DHL)</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Kekeruhan/turbidity</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Zat Padat Total</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Zat Padat Terlarut</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Zat Padat Tersuspensi</li>
+                    <li class="d-flex"><i class="bi bi-check-circle-fill text-success me-2"></i> Warna</li>
                 </ul>
                 <h6 class="fw-bold text-secondary">Parameter Kimia</h6>
                 <ul class="list-unstyled">
@@ -99,9 +99,9 @@
             <div class="col-md-6">
                 <h5 class="fw-bold text-muted mb-3">Peralatan Pengujian</h5>
                 <ul class="list-unstyled">
-                    <li><i class="bi bi-tools text-info me-2"></i> Spectrofotometer UV-VIS</li>
-                    <li><i class="bi bi-tools text-info me-2"></i> Metoda volumetri</li>
-                    <li><i class="bi bi-tools text-info me-2"></i> Atomic Absorption Spectrometer (AAS)</li>
+                    <li class="d-flex"><i class="bi bi-tools text-info me-2"></i> Spectrofotometer UV-VIS</li>
+                    <li class="d-flex"><i class="bi bi-tools text-info me-2"></i> Metoda volumetri</li>
+                    <li class="d-flex"><i class="bi bi-tools text-info me-2"></i> Atomic Absorption Spectrometer (AAS)</li>
                 </ul>
             </div>
         </div>
@@ -119,27 +119,89 @@
         </div>
         <p class="fs-6 lh-lg">Pengujian kimia mineral dilakukan untuk contoh bahan galian, batuan, dan pasir.</p>
         <h5 class="fw-bold text-muted mt-4 mb-3">Parameter Pengujian</h5>
-        <ul class="list-unstyled row g-2">
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> SiO<sub>2</sub> (Silikon Dioksida)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> Al<sub>2</sub>O<sub>3</sub> (Aluminium Oksida)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> Fe<sub>2</sub>O<sub>3</sub> (Besi(III) Oksida/Ferri Oksida)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> FeO (Besi(II) Oksida/Oksida Fero)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> CaO (Kalsium Oksida)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> MgO (Magnesium Oksida)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> K<sub>2</sub>O (Kalium Oksida)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> Na<sub>2</sub>O Natrium Oksida</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> TiO<sub>2</sub> (Titanium Dioksida)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> Mn (Mangan)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> MnO (Mangan(II) Oksida)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> SO<sub>3</sub> (Sulfur Trioksida)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> LOI (Loss on Ignition)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> H<sub>2</sub>O (Air)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> Pb (Timbal)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> Cu (Tembaga)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> Zn (Seng)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> Fe (Besi)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> Cd (Kadmium)</li>
-            <li class="col-md-4"><i class="bi bi-check-circle-fill text-success me-2"></i> dll.</li>
-        </ul>
+            <ul class="list-unstyled row g-2">
+                {{-- Contoh dengan item statis, terapkan pola ini pada loop dinamis Anda --}}
+
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>SiO<sub>2</sub> (Silikon Dioksida)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>Al<sub>2</sub>O<sub>3</sub> (Aluminium Oksida)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>Fe<sub>2</sub>O<sub>3</sub> (Besi(III) Oksida/Ferri Oksida)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>FeO (Besi(II) Oksida/Oksida Fero)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>CaO (Kalsium Oksida)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>MgO (Magnesium Oksida)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>K<sub>2</sub>O (Kalium Oksida)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>Na<sub>2</sub>O Natrium Oksida</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>TiO<sub>2</sub> (Titanium Dioksida)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>Mn (Mangan)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>MnO (Mangan(II) Oksida)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>SO<sub>3</sub> (Sulfur Trioksida)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>LOI (Loss on Ignition)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>H<sub>2</sub>O (Air)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>Pb (Timbal)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>Cu (Tembaga)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>Zn (Seng)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>Fe (Besi)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>Cd (Kadmium)</span>
+                </li>
+                <li class="col-md-4 d-flex align-items-baseline">
+                    <i class="bi bi-check-circle-fill text-success me-2 flex-shrink-0"></i>
+                    <span>dll.</span>
+                </li>
+            </ul>
     </div>
 </div>

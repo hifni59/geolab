@@ -32,7 +32,7 @@
     <p class="fs-5 lh-lg animate__animated animate__fadeInUp animate__delay-4s">
         Laboratorium UPTD Geolab Dinas ESDM Sumsel telah terakreditasi SNI ISO/IEC 17025;2017 sejak tahun 2010 yang masih dipertahankan menjadi salah satu nilai plus. Agar dapat memperluas pangsa pasar dan meningkatkan jumlah pelanggan pengujian, laboratorium membentuk Badan Layanan Umum Daerah (BLUD) berdasarkan Keputusan Gubernur Sumsel No.166/KPTS/IV/2024 tanggal 23 Februari 2024.
     </p>
-    <a href="#services-section" class="btn btn-primary btn-lg mt-3 animate__animated animate__zoomIn animate__delay-5s">Lihat Layanan Kami <i class="bi bi-arrow-right ms-2"></i></a>
+    <a href="/profil" class="btn btn-primary btn-lg mt-3 animate__animated animate__zoomIn animate__delay-5s">Profil dan Tupoksi <i class="bi bi-arrow-right ms-2"></i></a>
 </div>
     </div>
 </section>

@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Kontak Kami')
-
+@section('description', 'Informasi Kontak, Alamat dan Jam Operasional UPTD Geologi dan Laboratorium.')
 @section('content')
 <div class="container my-5">
     <div class="row justify-content-center">

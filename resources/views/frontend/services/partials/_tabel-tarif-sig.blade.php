@@ -10,7 +10,7 @@
 
         <div class="row mt-4">
             <div class="col-md-12 mb-5">
-                <h4 class="fw-bold mb-4"><i class="bi bi-map-fill me-2"></i> Pengolahan Data Spasial (SIG) </h4>
+                <h4 class="d-flex fw-bold mb-4"><i class="bi bi-map-fill me-2"></i> Pengolahan Data Spasial (SIG) </h4>
                 <div class="row g-4 justify-content-center">
 
                     {{-- Loop untuk setiap Layanan SIG (e.g., Peta Administrasi) --}}

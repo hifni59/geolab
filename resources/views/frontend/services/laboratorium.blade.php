@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Layanan Pengujian Laboratorium')
-
+@section('description', 'Deskripsi, Alur Pelayanan dan Tarif Layanan Pengujian Laboratorium di UPTD Geologi dan Laboratorium.')
 @section('content')
     <div class="container my-5">
         <div class="row justify-content-center">

@@ -127,3 +127,10 @@ body {
         box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175) !important; // Bayangan lebih kuat
     }
 }
+
+.highlight-search {
+    transition: all 1s ease-in-out;
+    border-radius: 0.5rem; /* Menyesuaikan dengan radius kartu */
+    background-color: #fffde7; /* Warna kuning muda */
+    box-shadow: 0 0 15px rgba(255, 235, 59, 0.8); /* Efek glow */
+}

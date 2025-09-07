@@ -11,11 +11,11 @@
         <p class="fs-6 lh-lg">Preparasi dan pengolahan contoh adalah tahapan penting sebelum dilakukan pengujian di laboratorium. Contoh uji yang digunakan untuk pengujian harus representatif dan sesuai dengan persyaratan pada metode standar uji yang digunakan.</p>
         <h5 class="fw-bold text-muted mt-4 mb-3">Peralatan yang digunakan:</h5>
         <ul class="list-unstyled row g-2">
-            <li class="col-md-6"><i class="bi bi-gear-fill text-info me-2"></i> Jaw crusher</li>
-            <li class="col-md-6"><i class="bi bi-gear-fill text-info me-2"></i> Raymond mill, ring grinder</li>
-            <li class="col-md-6"><i class="bi bi-gear-fill text-info me-2"></i> Rotap shieve shaker</li>
-            <li class="col-md-6"><i class="bi bi-gear-fill text-info me-2"></i> Drying oven</li>
-            <li class="col-md-6"><i class="bi bi-gear-fill text-info me-2"></i> Analytical balance</li>
+            <li class="d-flex col-md-6"><i class="bi bi-gear-fill text-info me-2"></i> Jaw crusher</li>
+            <li class="d-flex col-md-6"><i class="bi bi-gear-fill text-info me-2"></i> Raymond mill, ring grinder</li>
+            <li class="d-flex col-md-6"><i class="bi bi-gear-fill text-info me-2"></i> Rotap shieve shaker</li>
+            <li class="d-flex col-md-6"><i class="bi bi-gear-fill text-info me-2"></i> Drying oven</li>
+            <li class="d-flex col-md-6"><i class="bi bi-gear-fill text-info me-2"></i> Analytical balance</li>
         </ul>
     </div>
 </div>

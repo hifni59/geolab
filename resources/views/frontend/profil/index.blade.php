@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Profil UPTD Geologi dan Laboratorium')
+@section('title', 'Profil dan Tupoksi')
+@section('description', 'Profil dan Tupoksi UPTD Geologi dan Laboratorium.')
 
 @section('content')
 <div class="container my-5">

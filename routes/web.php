@@ -3,7 +3,6 @@
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BeritaController;
-use App\Http\Controllers\StrukturController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\SearchController;
 
@@ -14,12 +13,10 @@ Route::get('/search', [SearchController::class, 'index'])->name('search');
 // Rute Frontend
 Route::get('/', function () {
     return view('frontend.home');
-});
+})->name('frontend.home'); 
 
 Route::get('/profil', [ProfilController::class, 'index'])->name('profil');
-// Route::get('/profil', function () {
-//     return view('frontend.profile');
-// });
+
 
 // Rute untuk Layanan, semuanya ditangani oleh ServiceController
 Route::get('/layanan/laboratorium', [ServiceController::class, 'laboratorium'])->name('layanan.lab');
@@ -32,6 +29,3 @@ Route::get('/kontak', function () {
 
 // Rute untuk Berita
 Route::get('/berita', [BeritaController::class, 'index'])->name('berita.index');
-
-// Rute untuk Struktur Organisasi
-Route::get('/struktur', [StrukturController::class, 'index'])->name('struktur.index');

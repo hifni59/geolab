@@ -15,13 +15,14 @@ if (!function_exists('format_chemical_name')) {
             return '';
         }
         
-        // 1. Ubah subskrip: Cari huruf yang diikuti oleh angka.
-        // Contoh: "O2" akan menjadi "O<sub>2</sub>"
+        // Bagian ini sudah benar
         $formatted_name = preg_replace('/([A-Za-z])(\d+)/', '$1<sub>$2</sub>', $name);
 
-        // 2. Ubah superskrip: Cari tanda kurung dengan format (angka+/-).
-        // Contoh: "(2-)" akan menjadi "<sup>2-</sup>"
-        $formatted_name = preg_replace('/\(([\d]+[+-])\)/', '<sup>$1</sup>', $formatted_name);
+        // ======================= AWAL PERBAIKAN DI SINI =======================
+        // Mengubah \d+ (satu atau lebih angka) menjadi \d* (nol atau lebih angka)
+        // agar bisa menangani (+) dan (-)
+        $formatted_name = preg_replace('/\(([\d]*[+\-⁻⁺])\)/', '<sup>$1</sup>', $formatted_name);
+        // ======================= AKHIR PERBAIKAN DI SINI =======================
         
         return $formatted_name;
     }

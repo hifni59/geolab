@@ -68,3 +68,28 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+
+    document.addEventListener('DOMContentLoaded', function () {
+        // Cek apakah URL memiliki hash/anchor
+        if (window.location.hash) {
+            try {
+                // Cari elemen yang cocok dengan hash di URL (misal: #equipment-5)
+                const targetElement = document.querySelector(window.location.hash);
+
+                if (targetElement) {
+                    // Gulir ke elemen tersebut agar terlihat di tengah layar
+                    targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    
+                    // Tambahkan kelas highlight
+                    targetElement.classList.add('highlight-search');
+
+                    // Hapus kelas highlight setelah 4 detik (4000 milidetik)
+                    setTimeout(() => {
+                        targetElement.classList.remove('highlight-search');
+                    }, 4000);
+                }
+            } catch (e) {
+                console.error("Invalid selector for highlight:", window.location.hash);
+            }
+        }
+    });

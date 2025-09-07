@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
-@section('title', 'Berita Geolab')
+@section('title', 'Berita Terbaru')
+@section('description', 'Kumpulan berita dan informasi terkini dari UPTD Geologi dan Laboratorium.')
 
 @section('content')
 <div class="container my-5">

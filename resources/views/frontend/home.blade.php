@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Beranda')
-
+@section('description', 'Halaman Beranda Website UPTD Geologi dan Laboratorium Dinas ESDM Sumsel.')
 @section('content')
 {{-- Hero Section --}}
 <section class="hero-section text-center d-flex align-items-center"

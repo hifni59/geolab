@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('title', 'Penyewaan Peralatan')
-
+@section('description', 'Deskripsi, Alur Pelayanan dan Tarif Layanan Penyewaan Peralatan Eksplorasi di UPTD Geologi dan Laboratorium.')
 @section('content')
 <div class="container my-5">
     <div class="row justify-content-center">

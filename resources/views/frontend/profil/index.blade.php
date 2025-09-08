@@ -1,5 +1,4 @@
-@extends('layouts.app')
-
+@extends('layouts.frontend')
 @section('title', 'Profil dan Tupoksi')
 @section('description', 'Profil dan Tupoksi UPTD Geologi dan Laboratorium.')
 

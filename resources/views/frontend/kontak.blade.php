@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.frontend')
 
 @section('title', 'Kontak Kami')
 @section('description', 'Informasi Kontak, Alamat dan Jam Operasional UPTD Geologi dan Laboratorium.')

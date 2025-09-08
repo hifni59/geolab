@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.frontend')
 
 @section('title', 'Layanan Pengujian Laboratorium')
 @section('description', 'Deskripsi, Alur Pelayanan dan Tarif Layanan Pengujian Laboratorium di UPTD Geologi dan Laboratorium.')

@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.frontend')
 
 @section('title', 'Beranda')
 @section('description', 'Halaman Beranda Website UPTD Geologi dan Laboratorium Dinas ESDM Sumsel.')

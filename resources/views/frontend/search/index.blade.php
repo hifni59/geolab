@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.frontend')
 @section('title', 'Hasil Pencarian')
 @section('description', 'Halaman Hasil Pencarian di Web UPTD Geolab.')
 @section('content')
@@ -52,7 +52,11 @@
                             {{-- Ini akan menampilkan kartu peralatan yang kaya detail --}}
                             <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                                 <div class="card h-100 shadow-lg border-0 w-100">
-                                    <img src="{{ $alat->image_path ?? 'https://placehold.co/400x300/EBF4FF/76839A?text=' . urlencode($alat->name) }}" class="card-img-top" alt="{{ $alat->name }}">
+                                    @if ($alat->image_path)
+                                        <img src="{{ asset('storage/' . $alat->image_path) }}" class="card-img-top" alt="{{ $alat->name }}" style="height: 200px; object-fit: cover;">
+                                    @else
+                                        <img src="https://placehold.co/400x300/EBF4FF/76839A?text={{ urlencode($alat->name) }}" class="card-img-top" alt="{{ $alat->name }}">
+                                    @endif
                                     <div class="card-body">
                                         <h5 class="card-title fw-bold">{{ $alat->name }}</h5>
                                         <ul class="list-unstyled mt-3">

@@ -2,61 +2,56 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Illuminate\Http\Request; // <-- Pastikan Request di-import
 use Illuminate\Support\Facades\Http;
-use Illuminate\Support\Facades\Cache; // Import Cache
-use Illuminate\Support\Facades\Log;   // Import Log untuk mencatat error
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Log;
 
 class BeritaController extends Controller
 {
-    /**
-     * Menampilkan daftar postingan berita dari kategori Geolab.
-     */
-    public function index()
+    // Tentukan berapa banyak item per halaman
+    private $perPage = 3;
+
+    public function index(Request $request)
     {
-        // Definisikan kunci cache dan durasinya (dalam detik). 3600 = 1 jam.
-        $cacheKey = 'geolab_berita_posts';
-        $cacheDuration = 3600; // Cache selama 1 jam
-
         try {
-            // Gunakan Cache::remember()
-            // Jika data ada di cache, ia akan langsung mengembalikannya.
-            // Jika tidak, ia akan menjalankan closure, mengambil data dari API, 
-            // lalu menyimpannya di cache sebelum mengembalikannya.
-            $posts = Cache::remember($cacheKey, $cacheDuration, function () {
-                
-                // 1. Ambil URL API dari file .env
-                // rtrim() digunakan untuk memastikan tidak ada garis miring ganda
+            // Ambil SEMUA postingan Geolab dari cache atau API (logika ini tetap)
+            $allPosts = Cache::remember('geolab_berita_posts', 3600, function () {
                 $parentApiUrl = rtrim(env('PARENT_API_URL', 'http://127.0.0.1:8000'), '/');
-                $apiUrl = $parentApiUrl . '/api/berita';
+                $response = Http::get($parentApiUrl . '/api/berita');
 
-                // 2. Panggil API
-                $response = Http::get($apiUrl);
-
-                // 3. Proses data jika panggilan sukses
                 if ($response->successful() && isset($response->json()['data'])) {
-                    $allPosts = collect($response->json()['data']);
-
-                    // Filter untuk kategori 'Geolab'
-                    return $allPosts->filter(function ($post) {
-                        // Sesuaikan ini jika struktur data API berbeda (misal: $post['kategori']['slug'])
+                    return collect($response->json()['data'])->filter(function ($post) {
                         return isset($post['kategori']) && $post['kategori'] === 'Geolab';
-                    })->values(); // values() untuk mereset key array
+                    })->values();
                 }
-
-                // Jika API gagal atau format data salah, kembalikan collection kosong
                 return collect();
             });
 
-        } catch (\Illuminate\Http\Client\ConnectionException $e) {
-            // 4. Tangani error jika API tidak dapat dihubungi
-            Log::error('Gagal mengambil berita dari API: ' . $e->getMessage());
-            
-            // Berikan collection kosong ke view agar halaman tidak error, 
-            // tapi hanya menampilkan pesan 'tidak ada berita'.
-            $posts = collect();
-        }
+            // Ambil nomor halaman dari request, default-nya 1
+            $page = $request->input('page', 1);
 
-        return view('frontend.berita.index', compact('posts'));
+            // "Paginate" collection secara manual
+            $paginatedPosts = $allPosts->forPage($page, $this->perPage)->values();
+            
+            // Cek apakah ini permintaan AJAX (dari tombol "Muat Lebih Banyak")
+            if ($request->ajax()) {
+                // Jika ya, kirim hanya bagian HTML kartunya saja
+                return view('frontend.berita.partials._post_grid', ['posts' => $paginatedPosts])->render();
+            }
+            
+            // Jika ini permintaan halaman biasa (pertama kali), kirim halaman penuh
+            // Kirim postingan pertama dan total semua postingan
+            return view('frontend.berita.index', [
+                'initialPosts' => $paginatedPosts,
+                'totalPosts' => $allPosts->count()
+            ]);
+
+        } catch (\Illuminate\Http\Client\ConnectionException $e) {
+            Log::error('Gagal mengambil berita dari API: ' . $e->getMessage());
+            // Jika API error, tetap render halaman dengan data kosong
+            if ($request->ajax()) { return ''; } // Kirim string kosong untuk AJAX
+            return view('frontend.berita.index', ['initialPosts' => collect(), 'totalPosts' => 0]);
+        }
     }
 }

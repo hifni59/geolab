@@ -4,7 +4,12 @@ import laravel from 'laravel-vite-plugin';
 export default defineConfig({
     plugins: [
         laravel({
-            input: ['resources/sass/app.scss', 'resources/js/app.js'],
+            // Daftarkan SEMUA file sumber utama di sini
+            input: [
+                'resources/sass/app.scss',      // Menunjuk ke file SASS Anda
+                'resources/js/app.js',          // Untuk layout admin & Breeze (Alpine.js)
+                'resources/js/frontend.js',     // Untuk layout frontend Anda
+            ],
             refresh: true,
         }),
     ],

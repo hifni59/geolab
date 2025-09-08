@@ -22,8 +22,11 @@
                         @foreach($kategori->items as $item)
                             <div class="col-lg-4 col-md-6 d-flex align-items-stretch" id="equipment-{{ $item->id }}">
                                 <div class="card h-100 shadow-lg border-0 w-100">
-                                    {{-- Gambar: Gunakan path dari DB, atau fallback ke placeholder --}}
-                                    <img src="{{ $item->image_path ?? 'https://placehold.co/400x300/EBF4FF/76839A?text=' . urlencode($item->name) }}" class="card-img-top" alt="{{ $item->name }}">
+                                    @if ($item->image_path)
+                                        <img src="{{ asset('storage/' . $item->image_path) }}" class="card-img-top" alt="{{ $item->name }}" style="height: 200px; object-fit: cover;">
+                                    @else
+                                        <img src="https://placehold.co/400x300/EBF4FF/76839A?text={{ urlencode($item->name) }}" class="card-img-top" alt="{{ $item->name }}">
+                                    @endif
                                     <div class="card-body">
                                         <h5 class="card-title fw-bold">{{ $item->name }}</h5>
                                         <ul class="list-unstyled mt-3">

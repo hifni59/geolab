@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>@yield('title', 'UPTD Geologi & Laboratorium') - Geolab</title>
+    <meta name="description" content="@yield('description', 'Website resmi UPTD Geologi dan Laboratorium Dinas Energi dan Sumber Daya Mineral Provinsi Sumatera Selatan.')">
+
+    {{-- Fonts --}}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    {{-- Animate.css --}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    {{-- Styles --}}
+    @vite(['resources/sass/app.scss', 'resources/js/frontend.js'])
+
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+    @include('layouts.partials._header')
+
+    {{-- Main Content --}}
+    <main class="flex-grow-1">
+        @yield('content')
+    </main>
+
+    @include('layouts.partials._footer')
+
+    @include('layouts.partials._fixed_buttons')
+@stack('scripts')
+</body>
+</html>
